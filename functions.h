@@ -1,12 +1,11 @@
-#pragma once
 #include "header.h"
 
 string randomWord() {
 	ifstream inputFile;
 
 	int temp = 0;
-	for (int i = 0; !inputFile.eof; i++) {
-		temp++
+	for (int i = 0; !inputFile.eof(); i++) {
+		temp++;
 	}
 
 	srand(time(0));
@@ -14,7 +13,7 @@ string randomWord() {
 
 	int i = 0;
 	string line;
-	while (!inputFile.eof) {
+	while (!inputFile.eof()) {
 		getline(inputFile, line);
 		if (i == temp) {
 			break;
