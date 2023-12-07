@@ -1,3 +1,4 @@
+#pragma once
 #include "header.h"
 
 string randomWord() {
@@ -15,7 +16,7 @@ string randomWord() {
 	string line;
 	while (!inputFile.eof) {
 		getline(inputFile, line);
-		if (i==temp) {
+		if (i == temp) {
 			break;
 		}
 		i++;
@@ -27,10 +28,10 @@ bool completeWord(string word, string guess) {
 }
 
 string userInput(string word) {
-	
+
 }
 
-bool validateInput(string word, string &guessWord, char guess) {
+bool validateInput(string word, string& guessWord, char guess) {
 	for (int i = 0; i <= word.size(); i++) {
 		if (guess == word[i]) {
 

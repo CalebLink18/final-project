@@ -15,14 +15,21 @@ int main()
             //checks to see if the word is complete
             completeWord1 = completeWord(word, guessWord);
 
-            
-            string stringArray[1];
-            for (int i = 1; i <= word.size(); i++) {
-                for (int j = 0; j <= word.size(); j++) {
-                    
-                }
-                stringArray[i] = new char[word[i]];
+
+            //create two arrays, one that is a copy of word but in an array and one that is a match for that but boolean
+            //stringArray[i] = new char[word[i]];
+
+            //get length or word/word array
+            int tempArray = 0;
+            for (int i = 0; i < word.size(); i++) {
+                tempArray++;
             }
+
+            bool boolArray [1];
+            for (int i = 0; i < word.size(); i++) {
+                boolArray[i] = new bool[false];
+            }
+
 
             //if the word is fully guessed then end this round
             if (completeWord1 == true) {
