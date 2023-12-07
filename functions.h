@@ -30,13 +30,15 @@ string userInput(string word) {
 
 }
 
-bool validateInput(string word, string& guessWord, char guess) {
-	for (int i = 0; i <= word.size(); i++) {
+bool validateInput(string word, string& word2, char guess) {
+
+
+	/*for (int i = 0; i <= word.size(); i++) {
 		if (guess == word[i]) {
 
 			return true;
 		}
-	}
+	}*/
 }
 
 void setScreen(int num) {}

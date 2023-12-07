@@ -15,22 +15,6 @@ int main()
             //checks to see if the word is complete
             completeWord1 = completeWord(word, guessWord);
 
-
-            //create two arrays, one that is a copy of word but in an array and one that is a match for that but boolean
-            //stringArray[i] = new char[word[i]];
-
-            //get length or word/word array
-            int tempArray = 0;
-            for (int i = 0; i < word.size(); i++) {
-                tempArray++;
-            }
-
-            bool boolArray[1];
-            for (int i = 0; i < word.size(); i++) {
-                boolArray[i] = new bool[false];
-            }
-
-
             //if the word is fully guessed then end this round
             if (completeWord1 == true) {
                 cout << "that was the correct word, good job" << endl << "do you want to play again? (y/n)" << endl;
@@ -44,6 +28,14 @@ int main()
                 break;
             }
 
+
+
+            //create another string/array and set it to empty
+            string word2 = word;
+            for (int i = 0; i < word2.size(); i++) {
+                word2[0] = '';
+            }
+
             //takes a guess and sets 'guess' to that
             cout << "enter a letter to guess it" << endl;
             char temporary;
@@ -51,8 +43,10 @@ int main()
             guess = temporary;
 
             //checks validity of guess and sets screen to blank
-            guesstf = validateInput(word, guessWord, guess);
+            guesstf = validateInput(word, word2, guess);
             setScreen(0);
+
+
 
             //adds to the body count if false
             if (guesstf == false) {
@@ -84,14 +78,17 @@ int main()
                     setScreen(6);
                 }
 
-                //checks to see if we need to remove from body
-                cout << "do you want to cut a rope and get a limb back? (y/n)" << endl;
-                cin >> arrowCut;
+                if (body != 0) {
+                    //checks to see if we need to remove from body
+                    cout << "do you want to cut a rope and get a limb back? (y/n)" << endl;
+                    cin >> arrowCut;
 
-                //removes from body and prints new screen
-                if (arrowCut == "y" && body != 0) {
-                    setScreen(body - 1);
-                    body--;
+                    //removes from body and prints new screen
+                    if (arrowCut == "y" && body != 0) {
+                        setScreen(body - 1);
+                        body--;
+                    }
+                    arrowCut = "";
                 }
             }
         }
