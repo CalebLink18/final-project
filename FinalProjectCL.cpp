@@ -33,7 +33,7 @@ int main()
             //create another string/array and set it to empty
             string word2 = word;
             for (int i = 0; i < word2.size(); i++) {
-                word2[0] = '';
+                word2[0] = '-';
             }
 
             //takes a guess and sets 'guess' to that
