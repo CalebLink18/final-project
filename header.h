@@ -14,7 +14,7 @@ bool continue1 = true, loop = true;
 string randomWord();
 bool completeWord(string word, string guess);
 string userInput(string word);
-bool validateInput();
+bool validateInput(string word, string &guessWord, char guess);
 void setScreen(int num);
 
 #endif
