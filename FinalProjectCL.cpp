@@ -25,7 +25,7 @@ int main()
                 tempArray++;
             }
 
-            bool boolArray [1];
+            bool boolArray[1];
             for (int i = 0; i < word.size(); i++) {
                 boolArray[i] = new bool[false];
             }
